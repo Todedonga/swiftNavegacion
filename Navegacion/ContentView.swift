@@ -13,7 +13,10 @@ struct ContentView: View {
             Text("Bienvenido a la app de cuyos")
             Spacer()
             NavigationStack {
-                NavigationLink(destination: ItemDetailsView()) {
+                NavigationLink(destination: ItemDetailsView(name: "Compu", price: 15000)) {
+                    ItemRowView()
+                }
+                NavigationLink(destination: ItemDetailsView(name: "Compu 2", price: 30000)) {
                     ItemRowView()
                 }
                 Spacer()
