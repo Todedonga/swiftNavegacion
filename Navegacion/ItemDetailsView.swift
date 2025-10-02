@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItemDetailsView: View {
-    //@Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
     
     /* var name: String
      
@@ -36,7 +36,7 @@ struct ItemDetailsView: View {
     var body: some View {
         ScrollView(){
             VStack(alignment: .leading, spacing: 20){
-                Image("macbookpro")
+                Image("macpro")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
@@ -69,30 +69,17 @@ Con su espectacular pantalla Retina, cámara FaceTime HD y micrófonos con calid
 """).foregroundColor(Color.secondary)
             }.padding()
         }
-        
-        /*.navigationTitle("Detalles")
-         
-         .navigationBarTitleDisplayMode(.large)
-         
-         .navigationBarBackButtonHidden(true)
-         
-         .toolbar {
-         
-         ToolbarItem(placement: .navigationBarLeading) {
-         
-         Button { dismiss() } label: {
-         
-         Image(systemName:"arrow.backward.circle.fill")
-         
-         .foregroundColor(.yellow)
-         
-         }
-         
-         }
-         
-         }
-         
-         */
+        .navigationTitle("Detalles")
+        .navigationBarTitleDisplayMode(.large)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button { dismiss()
+                } label: {
+                    Image(systemName:"arrow.backward.circle.fill").foregroundColor(.yellow)
+                }
+            }
+        }
     }
 }
 
